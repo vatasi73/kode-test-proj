@@ -86,9 +86,8 @@ export default function HomePage() {
         <Skeleton />
       ) : (
         <>
-          {" "}
+          {error ? <Error /> : renderList}
           {!loadAll.length && <NothingFound />}
-          {error ? <Error /> : renderList}{" "}
         </>
       )}
     </>
